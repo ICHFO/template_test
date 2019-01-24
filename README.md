@@ -29,8 +29,19 @@ templates/new_template.html
 {% extends "resource.html" %}
 
 {% block rescontent %}
-<!-- Using a simple variable in jinja template -->
-<p> This is the value of the simple variable : {{ 
+<!-- Using a simple variable in jinja2 template -->
+<p> This is the value of the simple variable : {{ simple_var }} </p>
+
+
+<!-- using a more complex variable (dictionary) in jinja2 template -->
+<!-- fetching a single element from dictionay -->
+<p> This is the value of the 2nd dictionary element : {{ dict_var.get('mnd_var2') }} </p
+
+<!-- looping over the dictionary -->
+{% for k,v in dict_var.items() %}
+	<p> The value for dictionary key '{{ k }}' equals '{{ v }}' </p>
+{% endfor %}
+
 {% endblock %}
 ```
 
