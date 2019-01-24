@@ -20,6 +20,8 @@ If your new template extends from another template, your new class has to be a s
 Do not forget to add a mapping for te new TestData class in the class_dict at the bottom of test_data.py,
 this dictionary is used to return the correct TestData class based on the template name.
 
+
+
 example:
 
 templates/new_template.html
@@ -27,7 +29,8 @@ templates/new_template.html
 {% extends "resource.html" %}
 
 {% block rescontent %}
-Some HTML CODE here
+<!-- Using a simple variable in jinja template -->
+<p> This is the value of the simple variable : {{ 
 {% endblock %}
 ```
 
@@ -51,7 +54,11 @@ class Resource_TestData(Base_TestData):
     
 class New_Template_TestData(Resource_TestData):
   def __init__(self):
-    # code to add items to the data_dict from Base_TestData goes here
+    # add a simple variable to the data_dict
+    self.data_dict['simple_var'] = "Hallo daar!"
+    # add a more complex variable (dictionary) to the data_dict
+    my_new_dict = { 'mnd_var1' : 'dict var 1', 'mnd_var2' : 3, 'mnd_var3' : 3.5 }
+    self.data_dict['dict_var'] = my_new_dict
     return
 
 class_dict = {
