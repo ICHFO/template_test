@@ -9,29 +9,34 @@ class Base_TestData(object):
 		
 class Index_TestData(Base_TestData):
 	def __init__(self):
+		super().__init__()
 		return
 		
 class Resource_TestData(Base_TestData):
 	def __init__(self):
+		super().__init__()
 		return
 		
 class Add_Resource_TestData(Resource_TestData):
 	def __init__(self):
+		super().__init__()
 		return
 		
 class Modify_Resource_TestData(Resource_TestData):
 	def __init__(self):
+		super().__init__()
 		return
 		
 class Resource_Map_TestData(Resource_TestData):
 	def __init__(self):
+		super().__init__()
 		return
 
 
 def get_test_data(template_name):
 	return data_dict.get(template_name)().get_data_dict()
 	
-class_dict = {
+data_dict = {
 	'base.html' : Base_TestData,
 	'index.html' : Index_TestData,
 	'resource.html' : Resource_TestData,
