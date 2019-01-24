@@ -17,7 +17,7 @@ Adding a TestData class
 -----------------------
 If your new template extends from another template, your new class has to be a sub-class or the TestData class of the template you are extending.
 
-Do not forget to add a mapping for te new TestData class in the data_dict at the bottom of test_data.py,
+Do not forget to add a mapping for te new TestData class in the class_dict at the bottom of test_data.py,
 this dictionary is used to return the correct TestData class based on the template name.
 
 example:
@@ -54,7 +54,7 @@ class New_Template_TestData(Resource_TestData):
     # code to add items to the data_dict from Base_TestData goes here
     return
 
-data_dict = {
+class_dict = {
   'base.html' : Base_TestData,
   'index.html' : Index_TestData,
   'resource.html' : Resource_TestData,
