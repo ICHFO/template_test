@@ -49,11 +49,13 @@ class Base_TestData(object):
     
 class Resource_TestData(Base_TestData):
   def __init__(self):
+    super().__init__()
     # code to add items to the data_dict from Base_TestData goes here
     return
     
 class New_Template_TestData(Resource_TestData):
   def __init__(self):
+    super().__init__()
     # add a simple variable to the data_dict
     self.data_dict['simple_var'] = "Hallo daar!"
     # add a more complex variable (dictionary) to the data_dict
