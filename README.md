@@ -39,7 +39,7 @@ templates/new_template.html
 
 <!-- looping over the dictionary -->
 {% for k,v in dict_var.items() %}
-	<p> The value for dictionary key '{{ k }}' equals '{{ v }}' </p>
+	<p> The value for dictionary key {{ k }} equals {{ v }} </p>
 {% endfor %}
 
 {% endblock %}
