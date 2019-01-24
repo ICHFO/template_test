@@ -31,7 +31,7 @@ class Resource_Map_TestData(Resource_TestData):
 def get_test_data(template_name):
 	return data_dict.get(template_name)().get_data_dict()
 	
-data_dict = {
+class_dict = {
 	'base.html' : Base_TestData,
 	'index.html' : Index_TestData,
 	'resource.html' : Resource_TestData,
