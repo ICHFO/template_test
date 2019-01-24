@@ -1,6 +1,7 @@
 Pre-requisites:
-Jinja2 python module
-pip install jinja2
+===============
+Jinja2 python module:</br>
+<code> pip install jinja2 </code>
 
 
 Instructions:
