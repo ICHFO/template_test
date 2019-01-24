@@ -46,6 +46,7 @@ class Base_TestData(object):
     
 class Resource_TestData(Base_TestData):
   def __init__(self):
+    # code to add items to the data_dict from Base_TestData goes here
     return
     
 class New_Template_TestData(Resource_TestData):
